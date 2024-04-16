@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* NAVBAR */
+
+body{
+    background-color: rgb(255, 254, 254);
+ }
+ 
+ li{
+     list-style: none;
+ }
+ a{
+     text-decoration: none;
+     color: rgb(0, 0, 0);
+     font-size: 1rem;
+ }
+ a:hover{
+     color: #3ea1a1;
+ }
+ span{
+     color: aliceblue;
+ }
+ 
+ /* HEADER */
+ 
+ header{
+    position: relative;
+    padding: 0 2rem;
+ }
+
+ .ml{
+    font-weight:500;
+
+ }
+ /* .navbar .login a{
+    font-weight: 600;
+ } */
+ 
+ .navbar{
+     width: 100%;
+     height: 60px;
+     max-width: 1200px;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .navbar .logo a{
+     font-size: 1.5rem;
+     font-weight: bold;
+ }
+ .navbar .links-h {
+     display: flex;
+     gap: 2rem;
+ }
+ .navbar .toggle_btn{
+     color: aliceblue;
+     font-size: 1.5rem;
+     cursor: pointer;
+     display: none;
+ }
+ .action_btn{
+     background-color: orange;
+     color: aliceblue;
+     padding: 0.5rem 1rem;
+     border: none;
+     outline: none;
+     border-radius: 25px;
+     font-size: 0.8rem;
+     font-weight: bold;
+     cursor: pointer;
+     transition: scale 0.2 ease;
+ }
+ .action_btn:hover{
+     scale: 1.05;
+     color: aliceblue;
+ }
+ .action_btn:active{
+     scale: 0.95;
+ }
+ 
+ /* DROPDOWN MENU */
+ .dropdown-menu{
+     display: none;
+     position: absolute;
+     right: 2rem;
+     top: 60px;
+     width: 300px;
+     height: 0;
+     background: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(15px);
+     border-radius: 10px;
+     overflow: hidden;
+     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+ .dropdown-menu.open{
+     height: 250px;
+ }
+ .dropdown-menu li{
+     padding: 0.7rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ 
+ }
+ .dropdown-menu .action_btn{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ 
+ /* RESPONSIVE WEBSITE */
+  @media (max-width: 650px){
+     .navbar .links-h,
+     .navbar .action_btn{
+         display: none;
+     }
+     .navbar .toggle_btn{
+         display: block;
+     }
+     .dropdown-menu{
+         display: block;
+     }
+ }
+/* ///////////////////////////////////  */
+
+
+/* ***********************************************CHAT**************************************** */
+
+.chat{
+    display: block;
+    justify-items: center;
+    text-align: center;
+    padding: 50px;
+}
+.chat_d{
+    padding: 20px;
+}
+.chat_use{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+.chat_web ,.chat_download{
+    padding:  10px;
+    margin: 10 20px;
+    /* border: 2px solid red; */
+    border-radius: 20px;
+    background-color: #3cf184;
+
+}
+.chat_web a:hover{
+    color: orange;
+}
+.chat_download a:hover{
+    color: orange;
+}
+
+
+
+/* ************************upcoming-products********************* */
+
+/* upcoming-products-heading */
+
+.upcoming-products-heading{
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+}
+.upcoming-products-heading span{
+    font-size: 40px;
+    color: #0b0b0b;
+}
+/* .upcoming-products-content */
+.upcoming-products{
+    display: flex;
+    justify-content: center;
+    /* min-height: 100vh; */
+    background: #fff;
+}
+.card{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: rgb(125, 57, 57);
+    max-width: 300px;
+    min-width: 250px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px #494b4b;
+}
+
+.card img{
+    position: relative;
+    vertical-align: top;
+    max-width: 100%;
+    transition: 0.25s ease;
+}
+.card:hover img{
+    transform: scale(1.1);
+}
+.card figcaption{
+    position: absolute;
+    color: #101010;
+    padding: 15px 20px 40px;
+    bottom: 0;
+    z-index: 1;
+}
+.card figcaption::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg,#397878,#fff );
+    opacity: 0.8;
+    z-index: -1;
+}
+.card h3{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.card p{
+    font-size: 0.8em;
+    /* z-index: 1; */
+}
+.card a{
+    position: absolute;
+    bottom:10px ;
+    display: inline-block;
+    font-size: 0.75em;
+    color: #d7d8d8;
+    background: #494b4b;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius:10px ;
+    z-index: 1;
+    transition: 0.5s;
+}
+.card a:hover{
+    background: #101010;
+    text-decoration: underline;
+}
+
+/* *******************************footer*************************** */
+
+/* .footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+} */
+footer{
+    background-color: #6b6d6c;
+    position:relative ;
+    width: 100%;
+    min-height: 350px;
+    padding: 3rem ;
+}
+.container{
+    max-width: 1140px;
+    margin:0 auto ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.col{
+    min-height: 250px;
+    color: #fff;
+    font-family: poppins;
+    padding: 0 2rem;
+}
+.col h3{
+    color: red;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.col .social a {
+    color: brown;
+    margin-top: 2rem;
+    margin-right: 5px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+.col .social a:hover{
+    transform: scale(1.5);
+    filter: grayscale(25);
+}
+.col .links a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.col .links a::before{
+    content: '';
+    height: 13px;
+    width: 3px;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    background-color: red;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.col .links a:hover::before{
+    opacity: 1;
+}
+.col .links a:hover{
+    transform: translateX(-10px);
+}
+.col .contact-details span{
+    margin-right: 15px;
+}
